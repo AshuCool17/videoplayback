@@ -20,6 +20,8 @@ public class Video {
 	
 	private String userId;
 	
+	private Integer likes;
 	
+	private Integer dislikes;
 
 }
