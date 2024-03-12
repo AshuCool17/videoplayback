@@ -3,6 +3,8 @@
  */
 package com.continuecoding.videostreamingapp.model;
 
+import java.util.Set;
+
 import org.springframework.data.annotation.Id;
 
 /**
@@ -23,5 +25,9 @@ public class Video {
 	private Integer likes;
 	
 	private Integer dislikes;
+	
+	private Set<String> tags;
+	
+	private String videoUrl;
 
 }
