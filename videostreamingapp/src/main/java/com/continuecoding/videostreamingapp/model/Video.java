@@ -3,6 +3,7 @@
  */
 package com.continuecoding.videostreamingapp.model;
 
+import java.util.List;
 import java.util.Set;
 
 import org.springframework.data.annotation.Id;
@@ -38,5 +39,13 @@ public class Video {
 	private Set<String> tags;
 	
 	private String videoUrl;
+	
+	private VideoStatus videoStatus;
+	
+	private Integer viewCount;
+	
+	private String thumbnailUrl;
+	
+	private List<Comment> commentList;
 
 }
