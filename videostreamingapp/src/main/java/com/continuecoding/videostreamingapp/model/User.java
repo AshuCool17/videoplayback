@@ -3,6 +3,7 @@
  */
 package com.continuecoding.videostreamingapp.model;
 
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import lombok.AllArgsConstructor;
@@ -19,6 +20,13 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class User {
 	
+	@Id
 	private long id;
+	
+	private String firstName;
+	
+	private String lastName;
+	
+	private String email;
 
 }
