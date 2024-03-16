@@ -20,5 +20,7 @@ import lombok.NoArgsConstructor;
 public class Comment {
 	
 	private long id;
+	
+	private String text;
 
 }
