@@ -3,6 +3,8 @@
  */
 package com.continuecoding.videostreamingapp.model;
 
+import java.util.Set;
+
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -28,5 +30,13 @@ public class User {
 	private String lastName;
 	
 	private String email;
+	
+	private Set<String> subscribedToUsers;
+	
+	private Set<String> subscribers;
+	
+	private Set<String> likedVideos;
+	
+	private Set<String> dislikedVideos;
 
 }
