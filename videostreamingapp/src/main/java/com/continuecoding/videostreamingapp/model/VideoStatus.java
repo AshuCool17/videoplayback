@@ -13,12 +13,8 @@ import lombok.NoArgsConstructor;
  * @author Ashutosh
  *
  */
-@Document(value = "videoStatus")
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
-public class VideoStatus {
+public enum VideoStatus {
 	
-	private long id;
+	PUBLIC, PRIVATE, UNLISTED
 
 }
