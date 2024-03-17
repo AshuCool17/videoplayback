@@ -22,5 +22,11 @@ public class Comment {
 	private long id;
 	
 	private String text;
+	
+	private String authorId;
+	
+	private Integer likeCount;
+	
+	private Integer dislikeCount;
 
 }
