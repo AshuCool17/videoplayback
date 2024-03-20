@@ -23,6 +23,8 @@ public class S3Service implements FileService {
 		//to-do
 		String fileNameExtension = StringUtils.getFilenameExtension(file.getOriginalFilename());
 		String key = UUID.randomUUID().toString() + fileNameExtension;
+		String metadata = new ObjectMetadata();
+		metadata.set
 	}
 
 	
