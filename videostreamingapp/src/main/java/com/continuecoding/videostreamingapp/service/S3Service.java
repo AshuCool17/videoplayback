@@ -9,6 +9,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 import org.springframework.web.multipart.MultipartFile;
 
+import com.amazonaws.services.s3.model.ObjectMetadata;
+
 import lombok.var;
 
 /**
@@ -23,8 +25,9 @@ public class S3Service implements FileService {
 		//to-do
 		String fileNameExtension = StringUtils.getFilenameExtension(file.getOriginalFilename());
 		String key = UUID.randomUUID().toString() + fileNameExtension;
-		String metadata = new ObjectMetadata();
-		metadata.set
+		ObjectMetadata metadata = new ObjectMetadata();
+		metadata.setContentLength(file.getSize());
+		metadata.setContentType(file.getContentType());
 	}
 
 	
