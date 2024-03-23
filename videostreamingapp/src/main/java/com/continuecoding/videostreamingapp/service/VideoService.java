@@ -23,7 +23,7 @@ public class VideoService {
 	public void uploadVideo(MultipartFile file) {
 		String videoUrl = S3Service.uploadFile(file);
 		String video = new Video();
-		
+		video.setVideoUrl(videoUrl);
 	}
 
 }
