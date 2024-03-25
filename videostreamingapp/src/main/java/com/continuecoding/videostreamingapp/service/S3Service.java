@@ -24,9 +24,8 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class S3Service implements FileService {
 
-	private final AmazonS3Client amazonS3Client;
+	private static final AmazonS3Client amazonS3Client = new AmazonS3Client();
 	
-	@Override
 	public String uploadFile(MultipartFile file) {
 		//to-do
 		String fileNameExtension = StringUtils.getFilenameExtension(file.getOriginalFilename());
