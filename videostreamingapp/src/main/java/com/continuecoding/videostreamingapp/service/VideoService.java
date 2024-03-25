@@ -8,7 +8,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.continuecoding.videostreamingapp.model.Video;
-import com.continuecoding.videostreamingapp.repository.VideoRepository;
 
 import lombok.RequiredArgsConstructor;
 
@@ -21,17 +20,12 @@ import lombok.RequiredArgsConstructor;
 public class VideoService {
 	
 	@Autowired
-	private FileService fileService;
-	
-	@Autowired
-	private VideoRepository videoRepository;
+	private S3Service s3Service;
 	
 	public void uploadVideo(MultipartFile file) {
-		String videoUrl = S3Service.uploadFile(file);
-		String video = new Video();
+		String videoUrl = s3Service.uploadFile(file);
+		Video video = new Video();
 		video.setVideoUrl(videoUrl);
-		
-		videoRepository.save(video);
 	}
 
 }
