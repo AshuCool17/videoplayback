@@ -24,6 +24,8 @@ import lombok.RequiredArgsConstructor;
 @Service
 @RequiredArgsConstructor
 public class S3Service implements FileService {
+	
+	private static final String BUCKET_NAME = "youtube-demo-bucket";
 
 	private static final AmazonS3Client amazonS3Client = new AmazonS3Client();
 	
@@ -43,7 +45,7 @@ public class S3Service implements FileService {
 		
 		amazonS3Client.setObjectAcl(BUCKET_NAME, key, CannedAccessControlList.PublicRead);
 		
-		return null;
+		return amazonS3Client.getResourceUrl(BUCKET_NAME, key);
 	}
 
 	
