@@ -30,7 +30,6 @@ public class S3Service implements FileService {
 	private static final AmazonS3Client amazonS3Client = new AmazonS3Client();
 	
 	public String uploadFile(MultipartFile file) {
-		//to-do
 		String fileNameExtension = StringUtils.getFilenameExtension(file.getOriginalFilename());
 		String key = UUID.randomUUID().toString() + fileNameExtension;
 		ObjectMetadata metadata = new ObjectMetadata();
