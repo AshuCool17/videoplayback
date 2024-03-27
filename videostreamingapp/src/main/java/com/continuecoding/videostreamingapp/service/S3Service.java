@@ -44,7 +44,6 @@ public class S3Service implements FileService {
 		}
 		
 		amazonS3Client.setObjectAcl(BUCKET_NAME, key, CannedAccessControlList.PublicRead);
-		
 		return amazonS3Client.getResourceUrl(BUCKET_NAME, key);
 	}
 
