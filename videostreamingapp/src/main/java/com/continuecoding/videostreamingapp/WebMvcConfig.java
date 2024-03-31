@@ -3,10 +3,13 @@
  */
 package com.continuecoding.videostreamingapp;
 
+import org.springframework.context.annotation.Configuration;
+
 /**
  * @author Ashutosh
  *
  */
-public class WebMvcConfig {
+@Configuration
+public class WebMvcConfig implements WenMvcConfigurer{
 
 }
