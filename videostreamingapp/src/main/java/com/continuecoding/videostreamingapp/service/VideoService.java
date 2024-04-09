@@ -26,6 +26,11 @@ public class VideoService {
 		String videoUrl = s3Service.uploadFile(file);
 		Video video = new Video();
 		video.setVideoUrl(videoUrl);
+		
+		videoRepository.save(video);
 	}
 
+	public void editVideo(VideoDto videoDto) {
+		
+	}
 }
