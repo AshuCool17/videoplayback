@@ -36,7 +36,7 @@ public class VideoService {
 
 	public void editVideo(VideoDto videoDto) {
 		//find the video by id;
-		videoRepository.findById(videoDto.getId())
+		Video savedVideo = videoRepository.findById(videoDto.getId())
 		.orElseThrow(()-> new IllegalArgumentException("Cannot find video by id - " + videoDto.getId()));
 		//map the videodto fields to video
 		
