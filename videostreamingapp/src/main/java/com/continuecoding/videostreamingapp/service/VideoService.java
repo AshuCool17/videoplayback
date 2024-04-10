@@ -39,7 +39,7 @@ public class VideoService {
 		Video savedVideo = videoRepository.findById(videoDto.getId())
 		.orElseThrow(()-> new IllegalArgumentException("Cannot find video by id - " + videoDto.getId()));
 		//map the videodto fields to video
-		
+		savedVideo.setTitle(videoDto.getTitle());
 		//save the video to the DB
 	}
 }
