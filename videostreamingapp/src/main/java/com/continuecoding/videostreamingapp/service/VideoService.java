@@ -40,6 +40,7 @@ public class VideoService {
 		.orElseThrow(()-> new IllegalArgumentException("Cannot find video by id - " + videoDto.getId()));
 		//map the videodto fields to video
 		savedVideo.setTitle(videoDto.getTitle());
+		savedVideo.setDescription(videoDto.getDescription());
 		//save the video to the DB
 	}
 }
