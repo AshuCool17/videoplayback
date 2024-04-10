@@ -41,6 +41,7 @@ public class VideoService {
 		//map the videodto fields to video
 		savedVideo.setTitle(videoDto.getTitle());
 		savedVideo.setDescription(videoDto.getDescription());
+		savedVideo.setTags(videoDto.getTags());
 		//save the video to the DB
 	}
 }
