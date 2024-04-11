@@ -45,6 +45,6 @@ public class VideoService {
 		savedVideo.setThumbnailUrl(videoDto.getThumbnailUrl());
 		savedVideo.setVideoStatus(videoDto.getVideoStatus());
 		//save the video to the DB
-		
+		videoRepository.save(savedVideo);
 	}
 }
