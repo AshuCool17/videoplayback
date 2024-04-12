@@ -29,9 +29,14 @@ public class VideoController {
 		videoService.uploadVideo(file);
 	}
 	
+	@PostMapping
+	private void uploadThumbnail(@RequestParam("file") MultipartFile file,
+			@RequestParam("videoId") String videoId) {
+		videoService.uploadVideo(file);
+	}
+	
 	@PutMapping
 	public VideoDto editVideoMetadata(@RequestBody VideoDto videoDto){
 		return videoService.editVideo(videoDto);
-		
 	}
 }
