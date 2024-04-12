@@ -32,7 +32,7 @@ public class VideoController {
 	@PostMapping
 	private void uploadThumbnail(@RequestParam("file") MultipartFile file,
 			@RequestParam("videoId") String videoId) {
-		videoService.uploadVideo(file);
+		videoService.uploadThumbnail(file);
 	}
 	
 	@PutMapping
