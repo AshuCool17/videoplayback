@@ -36,8 +36,7 @@ public class VideoService {
 
 	public VideoDto editVideo(VideoDto videoDto) {
 		//find the video by id;
-		Video savedVideo = videoRepository.findById(videoDto.getId())
-		.orElseThrow(()-> new IllegalArgumentException("Cannot find video by id - " + videoDto.getId()));
+		
 		//map the videodto fields to video
 		savedVideo.setTitle(videoDto.getTitle());
 		savedVideo.setDescription(videoDto.getDescription());
@@ -47,5 +46,14 @@ public class VideoService {
 		//save the video to the DB
 		videoRepository.save(savedVideo);
 		return videoDto;
+	}
+
+	public void uploadThumbnail(MultipartFile file, String videoId) {
+		
+	}
+	
+	public Video getVideoById(String videoId) {
+		return videoRepository.findById(videoId)
+				.orElseThrow(()-> new IllegalArgumentException("Cannot find video by id - " + videoDto.getId()));
 	}
 }
