@@ -54,6 +54,6 @@ public class VideoService {
 	
 	public Video getVideoById(String videoId) {
 		return videoRepository.findById(videoId)
-				.orElseThrow(()-> new IllegalArgumentException("Cannot find video by id - " + videoDto.getId()));
+				.orElseThrow(()-> new IllegalArgumentException("Cannot find video by id - " + videoId));
 	}
 }
