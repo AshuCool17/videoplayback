@@ -36,7 +36,7 @@ public class VideoService {
 
 	public VideoDto editVideo(VideoDto videoDto) {
 		//find the video by id;
-		
+		Video savedVideo = getVideoById(videoDto.getId());
 		//map the videodto fields to video
 		savedVideo.setTitle(videoDto.getTitle());
 		savedVideo.setDescription(videoDto.getDescription());
