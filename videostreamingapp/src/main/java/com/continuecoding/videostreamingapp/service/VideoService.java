@@ -50,6 +50,9 @@ public class VideoService {
 
 	public void uploadThumbnail(MultipartFile file, String videoId) {
 		Video savedVideo = getVideoById(videoId);
+		String thumbnailUrl = s3Service.uploadFile(file);
+		savedVideo.setThumbnailUrl(thumbnailUrl);
+				
 	}
 	
 	public Video getVideoById(String videoId) {
