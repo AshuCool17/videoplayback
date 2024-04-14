@@ -52,7 +52,7 @@ public class VideoService {
 		Video savedVideo = getVideoById(videoId);
 		String thumbnailUrl = s3Service.uploadFile(file);
 		savedVideo.setThumbnailUrl(thumbnailUrl);
-				
+		videoRepository.save(savedVideo);
 	}
 	
 	public Video getVideoById(String videoId) {
