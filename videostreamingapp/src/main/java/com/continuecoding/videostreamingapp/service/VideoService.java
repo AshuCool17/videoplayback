@@ -48,11 +48,12 @@ public class VideoService {
 		return videoDto;
 	}
 
-	public void uploadThumbnail(MultipartFile file, String videoId) {
+	public String uploadThumbnail(MultipartFile file, String videoId) {
 		Video savedVideo = getVideoById(videoId);
 		String thumbnailUrl = s3Service.uploadFile(file);
 		savedVideo.setThumbnailUrl(thumbnailUrl);
 		videoRepository.save(savedVideo);
+		return thumbnailUrl;
 	}
 	
 	public Video getVideoById(String videoId) {
