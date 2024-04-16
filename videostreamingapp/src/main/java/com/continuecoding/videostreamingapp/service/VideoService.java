@@ -26,7 +26,7 @@ public class VideoService {
 	@Autowired
 	private VideoRepository videoRepository;
 	
-	public void uploadVideo(MultipartFile file) {
+	public UploadVideoResponse uploadVideo(MultipartFile file) {
 		String videoUrl = s3Service.uploadFile(file);
 		Video video = new Video();
 		video.setVideoUrl(videoUrl);
