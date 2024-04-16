@@ -30,8 +30,9 @@ public class VideoService {
 		String videoUrl = s3Service.uploadFile(file);
 		Video video = new Video();
 		video.setVideoUrl(videoUrl);
+		Video savedVideo = videoRepository.save(video);
 		
-		videoRepository.save(video);
+		
 	}
 
 	public VideoDto editVideo(VideoDto videoDto) {
