@@ -31,7 +31,7 @@ public class VideoService {
 		Video video = new Video();
 		video.setVideoUrl(videoUrl);
 		Video savedVideo = videoRepository.save(video);
-		
+		return new UploadVideoResponse(savedVideo.getId(), savedVideo.getVideoUrl());
 		
 	}
 
