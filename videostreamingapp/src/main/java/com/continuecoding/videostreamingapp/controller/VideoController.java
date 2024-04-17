@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
+import com.continuecoding.videostreamingapp.dto.UploadVideoResponse;
 import com.continuecoding.videostreamingapp.dto.VideoDto;
 import com.continuecoding.videostreamingapp.service.VideoService;
 
@@ -25,8 +26,8 @@ public class VideoController {
 	private VideoService videoService; 
 	
 	@PostMapping
-	private void uploadVideo(@RequestParam("file") MultipartFile file) {
-		videoService.uploadVideo(file);
+	private UploadVideoResponse uploadVideo(@RequestParam("file") MultipartFile file) {
+		return videoService.uploadVideo(file);
 	}
 	
 	@PostMapping
