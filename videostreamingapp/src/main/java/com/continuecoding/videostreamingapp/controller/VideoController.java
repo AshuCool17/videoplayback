@@ -4,6 +4,8 @@
 package com.continuecoding.videostreamingapp.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -39,5 +41,10 @@ public class VideoController {
 	@PutMapping
 	public VideoDto editVideoMetadata(@RequestBody VideoDto videoDto){
 		return videoService.editVideo(videoDto);
+	}
+	
+	@GetMapping(value = "/{videoId}")
+	public VideoDto getVideoDetails(@PathVariable String videoId) {
+		
 	}
 }
