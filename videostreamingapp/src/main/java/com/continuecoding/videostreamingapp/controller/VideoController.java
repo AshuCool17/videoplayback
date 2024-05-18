@@ -45,6 +45,6 @@ public class VideoController {
 	
 	@GetMapping(value = "/{videoId}")
 	public VideoDto getVideoDetails(@PathVariable String videoId) {
-		videoService.getVideoDetails(videoId);
+		return videoService.getVideoDetails(videoId);
 	}
 }
