@@ -73,5 +73,8 @@ public class VideoService {
 		videoDto.setThumbnailUrl(savedVideo.getThumbnailUrl());
 		videoDto.setTags(savedVideo.getTags());
 		videoDto.setVideoStatus(savedVideo.getVideoStatus());
+		videoDto.setVideoUrl(savedVideo.getVideoUrl());
+		
+		return videoDto;
 	}
 }
