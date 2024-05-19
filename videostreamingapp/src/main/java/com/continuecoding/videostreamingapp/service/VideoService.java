@@ -69,5 +69,7 @@ public class VideoService {
 		VideoDto videoDto = new VideoDto();
 		videoDto.setId(savedVideo.getId());
 		videoDto.setTitle(savedVideo.getTitle());
+		videoDto.setDescription(savedVideo.getDescription());
+		videoDto.setThumbnailUrl(savedVideo.getThumbnailUrl());
 	}
 }
