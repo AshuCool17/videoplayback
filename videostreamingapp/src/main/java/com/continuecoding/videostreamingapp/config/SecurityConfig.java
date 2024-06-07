@@ -8,5 +8,10 @@ package com.continuecoding.videostreamingapp.config;
  *
  */
 public class SecurityConfig extends WebSecurityConfigurerAdapter{
+	
+	@Override
+	protected void configure(HttpSecurity http) throws Exception{
+		
+	}
 
 }
