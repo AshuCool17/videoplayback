@@ -7,6 +7,6 @@ package com.continuecoding.videostreamingapp.config;
  * @author Ashutosh
  *
  */
-public class SecurityConfig {
+public class SecurityConfig extends WebSecurityConfigurerAdapter{
 
 }
