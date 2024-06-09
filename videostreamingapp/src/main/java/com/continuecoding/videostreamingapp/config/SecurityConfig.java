@@ -4,6 +4,7 @@
 package com.continuecoding.videostreamingapp.config;
 
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.http.SessionCreationPolicy;
 
 /**
  * @author Ashutosh
@@ -17,6 +18,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 			.anyRequest().authenticated()
 			.and()
 			.sessionManagement()
+			.sessionCreationPolicy(SessionCreationPolicy.STATELESS)
 	}
 
 }
