@@ -23,5 +23,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 			.oauth2ResourceServer()
 			.jwt();
 	}
+	
+	@Bean
+	JwtDecoder jwtDecoder() {
+		
+	}
 
 }
