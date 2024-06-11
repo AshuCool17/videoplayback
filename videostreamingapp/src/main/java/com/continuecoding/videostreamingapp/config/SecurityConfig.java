@@ -7,6 +7,7 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.oauth2.core.OAuth2TokenValidator;
 import org.springframework.security.oauth2.jwt.JwtDecoders;
+import org.springframework.security.oauth2.jwt.JwtValidators;
 
 /**
  * @author Ashutosh
@@ -31,6 +32,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 		NimbusJwtDecoder nimbusJwtDecoder = JwtDecoders.fromOidcIssuerLocation(issuer);
 		
 		OAuth2TokenValidator<Jwt> audienceValidator = new AudienceValidator(audience);
+		OAuth2TokenValidator<Jwt> withIssuer = JwtValidators.createDefaultWithIssuer(issuer);
 	}
 
 }
