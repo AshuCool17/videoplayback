@@ -5,6 +5,7 @@ package com.continuecoding.videostreamingapp.config;
 
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.http.SessionCreationPolicy;
+import org.springframework.security.oauth2.core.OAuth2TokenValidator;
 import org.springframework.security.oauth2.jwt.JwtDecoders;
 
 /**
@@ -28,6 +29,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 	@Bean
 	JwtDecoder jwtDecoder() {
 		NimbusJwtDecoder nimbusJwtDecoder = JwtDecoders.fromOidcIssuerLocation(issuer);
+		
+		OAuth2TokenValidator<Jwt> audienceValidator = new AudienceValidator(audience);
 	}
 
 }
