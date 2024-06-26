@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class UserController {
 
 	@GetMapping("/register")
-	public String register() {
+	public String register(Authentication authentication) {
 		return "User Registration Successfull";
 	}
 }
