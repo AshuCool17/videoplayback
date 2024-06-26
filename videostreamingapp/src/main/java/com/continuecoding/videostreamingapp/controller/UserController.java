@@ -18,6 +18,7 @@ public class UserController {
 
 	@GetMapping("/register")
 	public String register(Authentication authentication) {
+		Jwt jwt = (Jwt)authentication.getPrincipal();
 		return "User Registration Successfull";
 	}
 }
