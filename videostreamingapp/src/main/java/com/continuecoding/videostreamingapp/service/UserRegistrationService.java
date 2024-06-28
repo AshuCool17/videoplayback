@@ -19,5 +19,9 @@ public class UserRegistrationService {
 	private String userInfoEndpoint;
 	
 	private final UserRepository userRepository;
+	
+	public void registerUser() {
+		
+	}
 
 }
