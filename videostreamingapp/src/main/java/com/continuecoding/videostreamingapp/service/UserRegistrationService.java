@@ -15,6 +15,7 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class UserRegistrationService {
 	
+	@Value("${auth0.userInfoEndpoint}")
 	private String userInfoEndpoint;
 	
 	private final UserRepository userRepository;
