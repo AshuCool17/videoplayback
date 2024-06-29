@@ -3,6 +3,7 @@
  */
 package com.continuecoding.videostreamingapp.service;
 
+import org.apache.http.HttpRequest;
 import org.springframework.stereotype.Service;
 
 import lombok.RequiredArgsConstructor;
@@ -20,8 +21,9 @@ public class UserRegistrationService {
 	
 	private final UserRepository userRepository;
 	
-	public void registerUser() {
-		
+	public void registerUser(String tokenValue) {
+		HttpRequest.newBuilder()
+					.GET()
 	}
 
 }
