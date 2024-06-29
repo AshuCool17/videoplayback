@@ -3,6 +3,8 @@
  */
 package com.continuecoding.videostreamingapp.service;
 
+import java.net.URI;
+
 import org.apache.http.HttpRequest;
 import org.springframework.stereotype.Service;
 
@@ -24,6 +26,7 @@ public class UserRegistrationService {
 	public void registerUser(String tokenValue) {
 		HttpRequest.newBuilder()
 					.GET()
+					.uri(URI.create(userInfoEndpoint))
 	}
 
 }
