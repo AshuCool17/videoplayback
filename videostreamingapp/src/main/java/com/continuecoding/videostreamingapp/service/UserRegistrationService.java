@@ -27,6 +27,7 @@ public class UserRegistrationService {
 		HttpRequest.newBuilder()
 					.GET()
 					.uri(URI.create(userInfoEndpoint))
+					.setHeader("Authorization");
 	}
 
 }
