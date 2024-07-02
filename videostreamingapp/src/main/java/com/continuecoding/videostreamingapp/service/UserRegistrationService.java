@@ -4,8 +4,8 @@
 package com.continuecoding.videostreamingapp.service;
 
 import java.net.URI;
+import java.net.http.HttpRequest;
 
-import org.apache.http.HttpRequest;
 import org.springframework.stereotype.Service;
 
 import lombok.RequiredArgsConstructor;
@@ -27,7 +27,7 @@ public class UserRegistrationService {
 		HttpRequest.newBuilder()
 					.GET()
 					.uri(URI.create(userInfoEndpoint))
-					.setHeader("Authorization");
+					.setHeader("Authorization", "Bearer <jwt>");
 	}
 
 }
