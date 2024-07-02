@@ -3,6 +3,10 @@
  */
 package com.continuecoding.videostreamingapp.repository;
 
+import org.springframework.data.mongodb.repository.MongoRepository;
+
+import com.continuecoding.videostreamingapp.model.User;
+
 /**
  * @author Ashutosh
  *
