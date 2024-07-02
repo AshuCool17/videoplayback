@@ -6,6 +6,7 @@ package com.continuecoding.videostreamingapp.service;
 import java.net.URI;
 import java.net.http.HttpRequest;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import lombok.RequiredArgsConstructor;
