@@ -30,7 +30,8 @@ public class UserRegistrationService {
 		HttpRequest.newBuilder()
 					.GET()
 					.uri(URI.create(userInfoEndpoint))
-					.setHeader("Authorization", String.format("Bearer %s", tokenValue));
+					.setHeader("Authorization", String.format("Bearer %s", tokenValue))
+					.build();
 	}
 
 }
