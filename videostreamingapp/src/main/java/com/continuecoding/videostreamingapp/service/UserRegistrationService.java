@@ -28,7 +28,7 @@ public class UserRegistrationService {
 		HttpRequest.newBuilder()
 					.GET()
 					.uri(URI.create(userInfoEndpoint))
-					.setHeader("Authorization", "Bearer <jwt>");
+					.setHeader("Authorization", String.format("Bearer %s", tokenValue));
 	}
 
 }
