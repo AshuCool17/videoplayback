@@ -9,6 +9,8 @@ import java.net.http.HttpRequest;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
+import com.continuecoding.videostreamingapp.repository.UserRepository;
+
 import lombok.RequiredArgsConstructor;
 
 /**
