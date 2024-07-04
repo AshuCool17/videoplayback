@@ -27,7 +27,7 @@ public class UserRegistrationService {
 	private final UserRepository userRepository;
 	
 	public void registerUser(String tokenValue) {
-		HttpRequest.newBuilder()
+		HttpRequest httpRequest = HttpRequest.newBuilder()
 					.GET()
 					.uri(URI.create(userInfoEndpoint))
 					.setHeader("Authorization", String.format("Bearer %s", tokenValue))
