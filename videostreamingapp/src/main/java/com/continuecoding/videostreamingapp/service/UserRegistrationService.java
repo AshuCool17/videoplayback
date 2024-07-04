@@ -21,24 +21,24 @@ import lombok.RequiredArgsConstructor;
 @Service
 @RequiredArgsConstructor
 public class UserRegistrationService {
-	
+
 	@Value("${auth0.userInfoEndpoint}")
 	private String userInfoEndpoint;
-	
+
 	private final UserRepository userRepository;
-	
+
 	public void registerUser(String tokenValue) {
 		HttpRequest httpRequest = HttpRequest.newBuilder()
-											.GET()
-											.uri(URI.create(userInfoEndpoint))
-											.setHeader("Authorization", String.format("Bearer %s", tokenValue))
-											.build();
-		
+				.GET()
+				.uri(URI.create(userInfoEndpoint))
+				.setHeader("Authorization", String.format("Bearer %s", tokenValue))
+				.build();
+
 		HttpClient httpClient = HttpClient.newBuilder()
-										.version(HttpClient.Version.HTTP_2)
-										.build();
-		
-		
+				.version(HttpClient.Version.HTTP_2)
+				.build();
+
+
 	}
 
 }
