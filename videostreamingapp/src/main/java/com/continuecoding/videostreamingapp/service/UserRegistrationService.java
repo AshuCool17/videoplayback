@@ -34,7 +34,7 @@ public class UserRegistrationService {
 					.setHeader("Authorization", String.format("Bearer %s", tokenValue))
 					.build();
 		
-		HttpClient.newBuilder()
+		HttpClient httpClient = HttpClient.newBuilder()
 		.version(HttpClient.Version.HTTP_2)
 		.build();
 	}
