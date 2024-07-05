@@ -41,7 +41,8 @@ public class UserRegistrationService {
 				.build();
 
 		try {
-			httpClient.send(httpRequest, HttpResponse.BodyHandlers.ofString());
+			HttpResponse<String> responseString = httpClient.send(httpRequest, HttpResponse.BodyHandlers.ofString());
+			
 		} catch (IOException | InterruptedException e) {
 			throw new RuntimeException("Exception happened while registering user");
 		}
