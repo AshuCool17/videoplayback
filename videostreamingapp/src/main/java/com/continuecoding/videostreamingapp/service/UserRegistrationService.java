@@ -6,6 +6,7 @@ package com.continuecoding.videostreamingapp.service;
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
@@ -38,6 +39,7 @@ public class UserRegistrationService {
 				.version(HttpClient.Version.HTTP_2)
 				.build();
 
+		httpClient.send(httpRequest, HttpResponse.BodyHandlers.ofString());
 
 	}
 
