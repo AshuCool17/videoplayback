@@ -3,6 +3,7 @@
  */
 package com.continuecoding.videostreamingapp.service;
 
+import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
@@ -39,7 +40,11 @@ public class UserRegistrationService {
 				.version(HttpClient.Version.HTTP_2)
 				.build();
 
-		httpClient.send(httpRequest, HttpResponse.BodyHandlers.ofString());
+		try {
+			httpClient.send(httpRequest, HttpResponse.BodyHandlers.ofString());
+		} catch (IOException | InterruptedException e) {
+			throw new RuntimeException("Exception happened while registering user");
+		}
 
 	}
 
