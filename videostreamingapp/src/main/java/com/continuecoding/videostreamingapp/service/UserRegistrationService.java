@@ -13,6 +13,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import com.continuecoding.videostreamingapp.repository.UserRepository;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 import lombok.RequiredArgsConstructor;
 
@@ -43,6 +44,8 @@ public class UserRegistrationService {
 		try {
 			HttpResponse<String> responseString = httpClient.send(httpRequest, HttpResponse.BodyHandlers.ofString());
 			String body = responseString.body();
+			
+			ObjectMapper mapper = new ObjectMapper();
 		} catch (IOException | InterruptedException e) {
 			throw new RuntimeException("Exception happened while registering user");
 		}
