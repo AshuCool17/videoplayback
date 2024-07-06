@@ -42,7 +42,7 @@ public class UserRegistrationService {
 
 		try {
 			HttpResponse<String> responseString = httpClient.send(httpRequest, HttpResponse.BodyHandlers.ofString());
-			
+			String body = responseString.body();
 		} catch (IOException | InterruptedException e) {
 			throw new RuntimeException("Exception happened while registering user");
 		}
