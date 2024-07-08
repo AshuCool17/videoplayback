@@ -4,4 +4,6 @@ package com.continuecoding.videostreamingapp.dto;
 public class UserInfoDTO {
 
 	private String id;
+	
+	private String sub;
 }
