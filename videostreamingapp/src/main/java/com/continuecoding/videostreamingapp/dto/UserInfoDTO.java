@@ -8,4 +8,6 @@ public class UserInfoDTO {
 	private String sub;
 	
 	private String givenName;
+	
+	private String familyName;
 }
