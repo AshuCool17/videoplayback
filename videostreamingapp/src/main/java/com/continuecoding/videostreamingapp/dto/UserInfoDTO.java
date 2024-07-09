@@ -10,4 +10,6 @@ public class UserInfoDTO {
 	private String givenName;
 	
 	private String familyName;
+	
+	private String name;
 }
