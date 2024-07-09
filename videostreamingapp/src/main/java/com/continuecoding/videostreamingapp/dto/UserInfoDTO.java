@@ -12,4 +12,6 @@ public class UserInfoDTO {
 	private String familyName;
 	
 	private String name;
+	
+	private String picture;
 }
