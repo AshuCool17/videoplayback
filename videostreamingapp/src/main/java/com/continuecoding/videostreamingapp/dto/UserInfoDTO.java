@@ -2,6 +2,8 @@ package com.continuecoding.videostreamingapp.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import lombok.Data;
+
 @Data
 public class UserInfoDTO {
 
