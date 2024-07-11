@@ -18,6 +18,6 @@ public class UserInfoDTO {
 	private String name;
 	@JsonProperty("picture")
 	private String picture;
-	
+
 	private String email;
 }
