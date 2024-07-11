@@ -16,7 +16,7 @@ public class UserInfoDTO {
 	private String familyName;
 	@JsonProperty("name")
 	private String name;
-	
+	@JsonProperty("picture")
 	private String picture;
 	
 	private String email;
