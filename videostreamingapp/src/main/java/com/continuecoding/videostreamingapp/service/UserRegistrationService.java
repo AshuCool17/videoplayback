@@ -50,10 +50,10 @@ public class UserRegistrationService {
 			
 			ObjectMapper mapper = new ObjectMapper();
 			mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
-			
-			User user = new User();
-			
 			UserInfoDTO userInfoDTO = mapper.readValue(body, UserInfoDTO.class);
+			User user = new User();
+			user.setFirstName(userInfoDTO.getGivenName());
+			
 			
 		} catch (IOException | InterruptedException e) {
 			throw new RuntimeException("Exception happened while registering user");
