@@ -13,6 +13,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import com.continuecoding.videostreamingapp.dto.UserInfoDTO;
+import com.continuecoding.videostreamingapp.model.User;
 import com.continuecoding.videostreamingapp.repository.UserRepository;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -49,6 +50,8 @@ public class UserRegistrationService {
 			
 			ObjectMapper mapper = new ObjectMapper();
 			mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+			
+			User user = new User();
 			
 			UserInfoDTO userInfoDTO = mapper.readValue(body, UserInfoDTO.class);
 			
