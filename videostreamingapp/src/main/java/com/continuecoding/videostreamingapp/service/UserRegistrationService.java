@@ -14,6 +14,7 @@ import org.springframework.stereotype.Service;
 
 import com.continuecoding.videostreamingapp.dto.UserInfoDTO;
 import com.continuecoding.videostreamingapp.repository.UserRepository;
+import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import lombok.RequiredArgsConstructor;
@@ -47,6 +48,7 @@ public class UserRegistrationService {
 			String body = responseString.body();
 			
 			ObjectMapper mapper = new ObjectMapper();
+			mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
 			mapper.readValue(body, UserInfoDTO.class);
 		} catch (IOException | InterruptedException e) {
 			throw new RuntimeException("Exception happened while registering user");
