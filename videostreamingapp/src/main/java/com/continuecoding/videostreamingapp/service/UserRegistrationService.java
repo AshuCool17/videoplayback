@@ -54,7 +54,7 @@ public class UserRegistrationService {
 			User user = new User();
 			user.setFirstName(userInfoDTO.getGivenName());
 			user.setLastName(userInfoDTO.getFamilyName());
-			
+			user.setFullName(userInfoDTO.getName());
 			
 		} catch (IOException | InterruptedException e) {
 			throw new RuntimeException("Exception happened while registering user");
