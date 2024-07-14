@@ -53,6 +53,7 @@ public class UserRegistrationService {
 			UserInfoDTO userInfoDTO = mapper.readValue(body, UserInfoDTO.class);
 			User user = new User();
 			user.setFirstName(userInfoDTO.getGivenName());
+			user.setLastName(userInfoDTO.getFamilyName());
 			
 			
 		} catch (IOException | InterruptedException e) {
