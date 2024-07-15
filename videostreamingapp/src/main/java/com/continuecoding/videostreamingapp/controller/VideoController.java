@@ -50,6 +50,6 @@ public class VideoController {
 	
 	@PostMapping(value = "/{videoId}/like")
 	public VideoDto likeVideo() {
-		
+		return videoService.likeVideo();
 	}
 }
