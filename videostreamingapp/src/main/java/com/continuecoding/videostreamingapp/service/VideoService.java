@@ -79,6 +79,7 @@ public class VideoService {
 	}
 
 	public VideoDto likeVideo(String videoId) {
+		Video video = getVideoById(videoId);
 		return null;
 	}
 }
