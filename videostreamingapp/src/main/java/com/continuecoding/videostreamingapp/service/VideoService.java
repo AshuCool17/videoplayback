@@ -77,4 +77,8 @@ public class VideoService {
 		
 		return videoDto;
 	}
+
+	public VideoDto likeVideo(String videoId) {
+		return null;
+	}
 }
