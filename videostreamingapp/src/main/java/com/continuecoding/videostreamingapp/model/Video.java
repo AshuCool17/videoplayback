@@ -47,5 +47,9 @@ public class Video {
 	private String thumbnailUrl;
 	
 	private List<Comment> commentList;
+	
+	public void incrementLikes() {
+		this.likes = likes++;
+	}
 
 }
