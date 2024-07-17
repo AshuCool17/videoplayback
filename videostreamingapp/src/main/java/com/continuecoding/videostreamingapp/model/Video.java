@@ -5,6 +5,7 @@ package com.continuecoding.videostreamingapp.model;
 
 import java.util.List;
 import java.util.Set;
+import java.util.concurrent.atomic.AtomicInteger;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -32,7 +33,7 @@ public class Video {
 	
 	private String userId;
 	
-	private Integer likes;
+	private AtomicInteger likes;
 	
 	private Integer dislikes;
 	
@@ -49,7 +50,7 @@ public class Video {
 	private List<Comment> commentList;
 	
 	public void incrementLikes() {
-		this.likes = likes++;
+		likes.incrementAndGet();
 	}
 	
 	public void decrementLikes() {
