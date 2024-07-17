@@ -51,5 +51,9 @@ public class Video {
 	public void incrementLikes() {
 		this.likes = likes++;
 	}
+	
+	public void decrementLikes() {
+		
+	}
 
 }
