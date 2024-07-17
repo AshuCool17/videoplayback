@@ -53,7 +53,7 @@ public class Video {
 	}
 	
 	public void decrementLikes() {
-		
+		this.dislikes = dislikes++;
 	}
 
 }
