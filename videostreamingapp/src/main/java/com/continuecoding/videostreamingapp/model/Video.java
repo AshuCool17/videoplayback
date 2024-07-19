@@ -62,7 +62,7 @@ public class Video {
 	}
 	
 	public void decrementDislikes() {
-		
+		dislikes.decrementAndGet();
 	}
 
 }
