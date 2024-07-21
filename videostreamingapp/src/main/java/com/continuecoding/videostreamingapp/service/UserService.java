@@ -21,6 +21,7 @@ public class UserService {
 	private final UserRepository userRepository;
 	
 	public User getCurrentUser() {
+		
 		((Jwt) (SecurityContextHolder.getContext().getAuthentication().getPrincipal())).getClaim("sub");
 	}
 }
