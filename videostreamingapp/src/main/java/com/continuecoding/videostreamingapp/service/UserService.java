@@ -6,6 +6,7 @@ package com.continuecoding.videostreamingapp.service;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
+import com.continuecoding.videostreamingapp.model.User;
 import com.continuecoding.videostreamingapp.repository.UserRepository;
 
 import lombok.RequiredArgsConstructor;
