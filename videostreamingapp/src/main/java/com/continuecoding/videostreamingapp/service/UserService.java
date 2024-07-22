@@ -25,5 +25,6 @@ public class UserService {
 	public User getCurrentUser() {
 		
 		((Jwt) (SecurityContextHolder.getContext().getAuthentication().getPrincipal())).getClaim("sub");
+		return userRepository.findBySub(sub);
 	}
 }
