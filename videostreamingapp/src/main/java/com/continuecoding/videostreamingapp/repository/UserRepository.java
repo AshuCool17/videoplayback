@@ -13,4 +13,6 @@ import com.continuecoding.videostreamingapp.model.User;
  */
 public interface UserRepository extends MongoRepository<User, String>{
 
+	User findBySub(String sub);
+
 }
