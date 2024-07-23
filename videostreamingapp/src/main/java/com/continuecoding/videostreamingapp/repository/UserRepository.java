@@ -3,6 +3,8 @@
  */
 package com.continuecoding.videostreamingapp.repository;
 
+import java.util.Optional;
+
 import org.springframework.data.mongodb.repository.MongoRepository;
 
 import com.continuecoding.videostreamingapp.model.User;
@@ -13,6 +15,6 @@ import com.continuecoding.videostreamingapp.model.User;
  */
 public interface UserRepository extends MongoRepository<User, String>{
 
-	User findBySub(String sub);
+	Optional<User> findBySub(String sub);
 
 }
