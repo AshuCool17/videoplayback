@@ -26,6 +26,8 @@ public class VideoService {
 	private S3Service s3Service;
 	@Autowired
 	private VideoRepository videoRepository;
+	@Autowired
+	private UserService userService;
 	
 	public UploadVideoResponse uploadVideo(MultipartFile file) {
 		String videoUrl = s3Service.uploadFile(file);
@@ -79,7 +81,9 @@ public class VideoService {
 	}
 
 	public VideoDto likeVideo(String videoId) {
-		Video video = getVideoById(videoId);
+		Video videoById = getVideoById(videoId);
+		videoById.incrementLikes();
+		userService.addToLikedVideos(videoId);
 		return null;
 	}
 }
