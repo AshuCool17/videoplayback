@@ -25,6 +25,6 @@ public class UserService {
 	public User getCurrentUser() {
 		
 		String sub = ((Jwt) (SecurityContextHolder.getContext().getAuthentication().getPrincipal())).getClaim("sub");
-		return userRepository.findBySub(sub);
+		return userRepository.findBySub(sub).orElseThrow(()->new IllegalArgumentException("Cannot find user with id " + sub));
 	}
 }
