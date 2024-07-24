@@ -41,4 +41,7 @@ public class User {
 	
 	private Set<String> dislikedVideos;
 
+	public void addToLikedVideos(String videoId) {
+		likedVideos.add(videoId);
+	}
 }
