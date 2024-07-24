@@ -27,4 +27,8 @@ public class UserService {
 		String sub = ((Jwt) (SecurityContextHolder.getContext().getAuthentication().getPrincipal())).getClaim("sub");
 		return userRepository.findBySub(sub).orElseThrow(()->new IllegalArgumentException("Cannot find user with id " + sub));
 	}
+
+	public void addToLikedVideos(String videoId) {
+		
+	}
 }
