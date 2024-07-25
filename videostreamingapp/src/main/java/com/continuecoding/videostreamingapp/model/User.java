@@ -40,7 +40,7 @@ public class User {
 	
 	private Set<String> likedVideos = ConcurrentHashMap.newKeySet();
 	
-	private Set<String> dislikedVideos;
+	private Set<String> dislikedVideos = ConcurrentHashMap.newKeySet();
 
 	public void addToLikedVideos(String videoId) {
 		likedVideos.add(videoId);
