@@ -4,6 +4,7 @@
 package com.continuecoding.videostreamingapp.model;
 
 import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -37,7 +38,7 @@ public class User {
 	
 	private Set<String> subscribers;
 	
-	private Set<String> likedVideos;
+	private Set<String> likedVideos = ConcurrentHashMap.newKeySet();
 	
 	private Set<String> dislikedVideos;
 
