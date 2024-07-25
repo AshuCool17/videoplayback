@@ -31,5 +31,6 @@ public class UserService {
 	public void addToLikedVideos(String videoId) {
 		User currentUser = getCurrentUser();
 		currentUser.addToLikedVideos(videoId);
+		userRepository.save(currentUser);
 	}
 }
