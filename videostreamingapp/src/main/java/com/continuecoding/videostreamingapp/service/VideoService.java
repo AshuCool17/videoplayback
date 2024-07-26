@@ -82,6 +82,10 @@ public class VideoService {
 
 	public VideoDto likeVideo(String videoId) {
 		Video videoById = getVideoById(videoId);
+		
+		if(userService.ifLikedVideo(videoId)) {
+			videoById.decrementLikes();
+		}
 		videoById.incrementLikes();
 		userService.addToLikedVideos(videoId);
 		return null;
