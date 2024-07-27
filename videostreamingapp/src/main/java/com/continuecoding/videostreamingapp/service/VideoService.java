@@ -91,9 +91,10 @@ public class VideoService {
 			userService.removeFromDislikeVideos(videoId);
 			videoById.incrementLikes();
 			userService.addToLikedVideos(videoId);
+		}else {
+			videoById.incrementLikes();
+			userService.addToLikedVideos(videoId);
+			return null;
 		}
-		videoById.incrementLikes();
-		userService.addToLikedVideos(videoId);
-		return null;
 	}
 }
