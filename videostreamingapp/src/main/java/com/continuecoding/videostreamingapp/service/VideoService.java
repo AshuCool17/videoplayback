@@ -90,6 +90,7 @@ public class VideoService {
 			videoById.decrementDislikes();
 			userService.removeFromDislikeVideos(videoId);
 			videoById.incrementLikes();
+			userService.addToLikedVideos(videoId);
 		}
 		videoById.incrementLikes();
 		userService.addToLikedVideos(videoId);
