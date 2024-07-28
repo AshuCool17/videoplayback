@@ -96,5 +96,14 @@ public class VideoService {
 			userService.addToLikedVideos(videoId);
 			return null;
 		}
+		
+		VideoDto videoDto = new VideoDto();
+		videoDto.setId(videoById.getId());
+		videoDto.setTitle(savedVideo.getTitle());
+		videoDto.setDescription(savedVideo.getDescription());
+		videoDto.setThumbnailUrl(savedVideo.getThumbnailUrl());
+		videoDto.setTags(savedVideo.getTags());
+		videoDto.setVideoStatus(savedVideo.getVideoStatus());
+		videoDto.setVideoUrl(savedVideo.getVideoUrl());
 	}
 }
