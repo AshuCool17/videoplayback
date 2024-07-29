@@ -99,7 +99,7 @@ public class VideoService {
 		
 		VideoDto videoDto = new VideoDto();
 		videoDto.setId(videoById.getId());
-		videoDto.setTitle(savedVideo.getTitle());
+		videoDto.setTitle(videoById.getTitle());
 		videoDto.setDescription(savedVideo.getDescription());
 		videoDto.setThumbnailUrl(savedVideo.getThumbnailUrl());
 		videoDto.setTags(savedVideo.getTags());
