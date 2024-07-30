@@ -104,6 +104,6 @@ public class VideoService {
 		videoDto.setThumbnailUrl(videoById.getThumbnailUrl());
 		videoDto.setTags(videoById.getTags());
 		videoDto.setVideoStatus(videoById.getVideoStatus());
-		videoDto.setVideoUrl(savedVideo.getVideoUrl());
+		videoDto.setVideoUrl(videoById.getVideoUrl());
 	}
 }
