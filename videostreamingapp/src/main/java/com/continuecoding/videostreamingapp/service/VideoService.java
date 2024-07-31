@@ -106,5 +106,6 @@ public class VideoService {
 		videoDto.setVideoStatus(videoById.getVideoStatus());
 		videoDto.setVideoUrl(videoById.getVideoUrl());
 		videoDto.setLikeCount(videoById.getLikes().get());
+		videoDto.setDislikeCount(videoById.getDislikes().get());
 	}
 }
