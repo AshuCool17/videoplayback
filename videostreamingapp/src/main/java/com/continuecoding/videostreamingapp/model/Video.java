@@ -33,7 +33,7 @@ public class Video {
 	
 	private String userId;
 	
-	private AtomicInteger likes;
+	private AtomicInteger likes = new AtomicInteger(0);
 	
 	private AtomicInteger dislikes;
 	
