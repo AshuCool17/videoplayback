@@ -35,7 +35,7 @@ public class Video {
 	
 	private AtomicInteger likes = new AtomicInteger(0);
 	
-	private AtomicInteger dislikes;
+	private AtomicInteger dislikes = new AtomicInteger(0);
 	
 	private Set<String> tags;
 	
