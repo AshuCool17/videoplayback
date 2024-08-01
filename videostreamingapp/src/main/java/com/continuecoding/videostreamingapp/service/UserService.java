@@ -41,4 +41,10 @@ public class UserService {
 	public boolean ifDisLikedVideo(String videoId) {
 		return getCurrentUser().getDislikedVideos().stream().anyMatch(dislikedVideo->dislikedVideo.equals(videoId));
 	}
+	
+	public void removeFromLikedVideos(String videoId) {
+		User currentUser = getCurrentUser();
+		currentUser.removeFromLikedVideos(videoId);
+		userRepository.save(currentUser);
+	}
 }
