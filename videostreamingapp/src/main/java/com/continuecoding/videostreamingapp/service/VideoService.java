@@ -97,6 +97,8 @@ public class VideoService {
 			return null;
 		}
 		
+		videoRepository.save(videoById);
+		
 		VideoDto videoDto = new VideoDto();
 		videoDto.setId(videoById.getId());
 		videoDto.setTitle(videoById.getTitle());
