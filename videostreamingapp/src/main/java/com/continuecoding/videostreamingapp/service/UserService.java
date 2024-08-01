@@ -37,4 +37,8 @@ public class UserService {
 	public boolean ifLikedVideo(String videoId) {
 		return getCurrentUser().getLikedVideos().stream().anyMatch(likedVideo->likedVideo.equals(videoId));
 	}
+	
+	public boolean ifDisLikedVideo(String videoId) {
+		return getCurrentUser().getDislikedVideos().stream().anyMatch(dislikedVideo->dislikedVideo.equals(videoId));
+	}
 }
