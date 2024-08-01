@@ -33,4 +33,8 @@ public class UserService {
 		currentUser.addToLikedVideos(videoId);
 		userRepository.save(currentUser);
 	}
+	
+	public boolean ifLikedVideo(String videoId) {
+		return getCurrentUser().getLikedVideos().stream().anyMatch(likedVideo->likedVideo.equals(videoId));
+	}
 }
