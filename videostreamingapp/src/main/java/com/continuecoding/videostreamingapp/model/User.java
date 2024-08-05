@@ -9,8 +9,6 @@ import java.util.concurrent.ConcurrentHashMap;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import com.continuecoding.videostreamingapp.repository.UserRepository;
-
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
