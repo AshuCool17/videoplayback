@@ -47,4 +47,8 @@ public class User {
 	public void addToLikedVideos(String videoId) {
 		likedVideos.add(videoId);
 	}
+
+	public void removeFromLikedVideos(String videoId) {
+		//dislikedVideos.add(videoId);
+	}
 }
