@@ -47,4 +47,8 @@ public class UserService {
 		currentUser.removeFromLikedVideos(videoId);
 		userRepository.save(currentUser);
 	}
+	
+	public void addToDisLikedVideos(String videoId) {
+		
+	}
 }
