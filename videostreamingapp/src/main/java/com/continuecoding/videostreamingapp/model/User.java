@@ -49,4 +49,9 @@ public class User {
 	public void removeFromLikedVideos(String videoId) {
 		dislikedVideos.add(videoId);
 	}
+
+	public void addToDisLikedVideos(String videoId) {
+		// TODO Auto-generated method stub
+		
+	}
 }
