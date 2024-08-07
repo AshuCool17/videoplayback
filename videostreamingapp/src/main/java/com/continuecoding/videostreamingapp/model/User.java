@@ -51,7 +51,6 @@ public class User {
 	}
 
 	public void addToDisLikedVideos(String videoId) {
-		// TODO Auto-generated method stub
-		
+		dislikedVideos.add(videoId);
 	}
 }
