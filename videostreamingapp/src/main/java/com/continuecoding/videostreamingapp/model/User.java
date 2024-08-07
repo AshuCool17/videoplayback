@@ -53,4 +53,7 @@ public class User {
 	public void addToDisLikedVideos(String videoId) {
 		dislikedVideos.add(videoId);
 	}
+	
+	public void removeFromDisLikedVideos(String videoId) {
+	}
 }
