@@ -55,5 +55,6 @@ public class User {
 	}
 	
 	public void removeFromDisLikedVideos(String videoId) {
+		dislikedVideos.remove(videoId);
 	}
 }
