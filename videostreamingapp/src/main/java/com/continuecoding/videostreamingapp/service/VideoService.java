@@ -68,6 +68,8 @@ public class VideoService {
 	public VideoDto getVideoDetails(String videoId) {
 		Video savedVideo = getVideoById(videoId);
 		
+		increaseVideoCount(savedVideo);
+		
 		VideoDto videoDto = new VideoDto();
 		videoDto.setId(savedVideo.getId());
 		videoDto.setTitle(savedVideo.getTitle());
