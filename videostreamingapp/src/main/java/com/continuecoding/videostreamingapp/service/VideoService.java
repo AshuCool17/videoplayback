@@ -82,9 +82,8 @@ public class VideoService {
 		return videoDto;
 	}
 
-	private void increaseVideoCount(Video savedVideo) {
-		// TODO Auto-generated method stub
-		
+	private void incrementVideoCount(Video savedVideo) {
+		viewCount.incrementAndGet();
 	}
 
 	public VideoDto likeVideo(String videoId) {
