@@ -64,5 +64,9 @@ public class Video {
 	public void decrementDislikes() {
 		dislikes.decrementAndGet();
 	}
+	
+	private void incrementVideoCount(Video savedVideo) {
+		viewCount.incrementAndGet();
+	}
 
 }
