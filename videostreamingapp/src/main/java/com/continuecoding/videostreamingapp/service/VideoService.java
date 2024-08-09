@@ -82,10 +82,6 @@ public class VideoService {
 		return videoDto;
 	}
 
-	private void incrementVideoCount(Video savedVideo) {
-		viewCount.incrementAndGet();
-	}
-
 	public VideoDto likeVideo(String videoId) {
 		Video videoById = getVideoById(videoId);
 		
