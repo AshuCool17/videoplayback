@@ -43,7 +43,7 @@ public class Video {
 	
 	private VideoStatus videoStatus;
 	
-	private Integer viewCount;
+	private AtomicInteger viewCount =  new AtomicInteger(0);
 	
 	private String thumbnailUrl;
 	
