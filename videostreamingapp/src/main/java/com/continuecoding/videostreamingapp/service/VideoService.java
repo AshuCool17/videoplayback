@@ -114,7 +114,7 @@ public class VideoService {
 	}
 	
 	public void increaseVideoCount(Video savedVideo) {
-		
+		savedVideo.incrementViewCount();
 	}
 
 	public VideoDto disLikeVideo(String videoId) {
