@@ -112,6 +112,10 @@ public class VideoService {
 		videoDto.setLikeCount(videoById.getLikes().get());
 		videoDto.setDislikeCount(videoById.getDislikes().get());
 	}
+	
+	public void increaseVideoCount(Video savedVideo) {
+		
+	}
 
 	public VideoDto disLikeVideo(String videoId) {
 		return null;
