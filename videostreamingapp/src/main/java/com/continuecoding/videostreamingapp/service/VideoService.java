@@ -69,6 +69,7 @@ public class VideoService {
 		Video savedVideo = getVideoById(videoId);
 		
 		increaseVideoCount(savedVideo);
+		userService.addVideoToHistory(savedVideo);
 		
 		VideoDto videoDto = new VideoDto();
 		videoDto.setId(savedVideo.getId());
