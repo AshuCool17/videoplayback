@@ -8,6 +8,7 @@ import org.springframework.security.oauth2.jwt.Jwt;
 import org.springframework.stereotype.Service;
 
 import com.continuecoding.videostreamingapp.model.User;
+import com.continuecoding.videostreamingapp.model.Video;
 import com.continuecoding.videostreamingapp.repository.UserRepository;
 
 import lombok.RequiredArgsConstructor;
@@ -52,5 +53,10 @@ public class UserService {
 		User currentUser = getCurrentUser();
 		currentUser.addToDisLikedVideos(videoId);
 		userRepository.save(currentUser);
+	}
+
+	public void addVideoToHistory(Video savedVideo) {
+		// TODO Auto-generated method stub
+		
 	}
 }
