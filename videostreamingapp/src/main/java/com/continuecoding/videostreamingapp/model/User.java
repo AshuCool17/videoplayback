@@ -57,4 +57,9 @@ public class User {
 	public void removeFromDisLikedVideos(String videoId) {
 		dislikedVideos.remove(videoId);
 	}
+
+	public void addToVideoHistory(String id2) {
+		// TODO Auto-generated method stub
+		
+	}
 }
