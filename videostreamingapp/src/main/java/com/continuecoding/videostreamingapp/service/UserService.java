@@ -56,7 +56,6 @@ public class UserService {
 	}
 
 	public void addVideoToHistory(Video savedVideo) {
-		// TODO Auto-generated method stub
-		
+		User currentUser = getCurrentUser();
 	}
 }
