@@ -57,5 +57,6 @@ public class UserService {
 
 	public void addVideoToHistory(Video savedVideo) {
 		User currentUser = getCurrentUser();
+		currentUser.addToVideoHistory(savedVideo.getId());
 	}
 }
