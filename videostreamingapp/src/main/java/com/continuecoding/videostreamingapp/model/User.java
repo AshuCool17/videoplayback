@@ -38,6 +38,8 @@ public class User {
 	
 	private Set<String> subscribers;
 	
+	private Set<String> videoHistory = ConcurrentHashMap.newKeySet();
+	
 	private Set<String> likedVideos = ConcurrentHashMap.newKeySet();
 	
 	private Set<String> dislikedVideos = ConcurrentHashMap.newKeySet();
@@ -58,8 +60,7 @@ public class User {
 		dislikedVideos.remove(videoId);
 	}
 
-	public void addToVideoHistory(String id2) {
-		// TODO Auto-generated method stub
+	public void addToVideoHistory(String id) {
 		
 	}
 }
