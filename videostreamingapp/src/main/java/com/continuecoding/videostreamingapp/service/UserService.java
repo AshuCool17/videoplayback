@@ -55,8 +55,9 @@ public class UserService {
 		userRepository.save(currentUser);
 	}
 
-	public void addVideoToHistory(Video savedVideo) {
+	public void addVideoToHistory(String videoId) {
 		User currentUser = getCurrentUser();
-		currentUser.addToVideoHistory(savedVideo.getId());
+		currentUser.addToVideoHistory(videoId);
+		userRepository.save(currentUser);
 	}
 }
