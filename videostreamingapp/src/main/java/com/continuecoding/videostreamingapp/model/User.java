@@ -60,7 +60,7 @@ public class User {
 		dislikedVideos.remove(videoId);
 	}
 
-	public void addToVideoHistory(String id) {
-		
+	public void addToVideoHistory(String videoId) {
+		videoHistory.add(videoId);
 	}
 }
