@@ -60,4 +60,8 @@ public class UserService {
 		currentUser.addToVideoHistory(videoId);
 		userRepository.save(currentUser);
 	}
+
+	public boolean ifDislikedVideo(String videoId) {
+		return false;
+	}
 }
