@@ -81,7 +81,7 @@ public class VideoService {
 		videoDto.setVideoUrl(savedVideo.getVideoUrl());
 		videoDto.setLikeCount(savedVideo.getLikes().get());
 		videoDto.setDislikeCount(savedVideo.getDislikes().get());
-		
+		videoDto.setViewCount(savedVideo.getViewCount().get());		
 		return videoDto;
 	}
 
