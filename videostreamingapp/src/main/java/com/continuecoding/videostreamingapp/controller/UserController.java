@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.continuecoding.videostreamingapp.service.UserRegistrationService;
+
 /**
  * @author Ashutosh
  *
@@ -19,6 +21,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/user")
 public class UserController {
 
+	private final UserRegistrationService userRegistrationService;
+	
 	@GetMapping("/register")
 	public String register(Authentication authentication) {
 		Jwt jwt = (Jwt)authentication.getPrincipal();
