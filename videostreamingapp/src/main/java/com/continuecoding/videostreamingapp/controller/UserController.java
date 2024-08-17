@@ -13,12 +13,15 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.continuecoding.videostreamingapp.service.UserRegistrationService;
 
+import lombok.RequiredArgsConstructor;
+
 /**
  * @author Ashutosh
  *
  */
 @RestController
 @RequestMapping("/api/user")
+@RequiredArgsConstructor
 public class UserController {
 
 	private final UserRegistrationService userRegistrationService;
