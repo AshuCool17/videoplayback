@@ -37,6 +37,6 @@ public class UserController {
 	
 	@PostMapping("subscribe/{userId}")
 	public void subscribeUser(@PathVariable String userId) {
-		
+		userService.subscribeUser(userId);
 	}
 }
