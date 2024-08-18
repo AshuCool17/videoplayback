@@ -64,4 +64,9 @@ public class UserService {
 	public boolean ifDislikedVideo(String videoId) {
 		return false;
 	}
+
+	public void subscribeUser(String userId) {
+		// TODO Auto-generated method stub
+		
+	}
 }
