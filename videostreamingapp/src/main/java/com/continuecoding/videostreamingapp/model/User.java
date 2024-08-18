@@ -34,7 +34,7 @@ public class User {
 	
 	private String email;
 	
-	private Set<String> subscribedToUsers;
+	private Set<String> subscribedToUsers = ConcurrentHashMap.newKeySet();
 	
 	private Set<String> subscribers;
 	
