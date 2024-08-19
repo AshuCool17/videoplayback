@@ -36,7 +36,7 @@ public class User {
 	
 	private Set<String> subscribedToUsers = ConcurrentHashMap.newKeySet();
 	
-	private Set<String> subscribers;
+	private Set<String> subscribers = ConcurrentHashMap.newKeySet();
 	
 	private Set<String> videoHistory = ConcurrentHashMap.newKeySet();
 	
