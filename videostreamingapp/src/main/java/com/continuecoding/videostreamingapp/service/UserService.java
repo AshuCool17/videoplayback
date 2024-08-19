@@ -67,6 +67,6 @@ public class UserService {
 
 	public void subscribeUser(String userId) {
 		User currentUser = getCurrentUser();
-		
+		currentUser.addToSubscribedToUsers(userId);
 	}
 }
