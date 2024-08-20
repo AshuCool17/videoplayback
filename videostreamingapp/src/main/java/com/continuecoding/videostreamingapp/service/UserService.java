@@ -68,4 +68,8 @@ public class UserService {
 		User currentUser = getCurrentUser();
 		currentUser.addToSubscribedToUsers(userId);
 	}
+
+	public void removeFromDislikeVideos(String videoId) {
+		
+	}
 }
