@@ -65,6 +65,6 @@ public class User {
 	}
 
 	public void addToSubscribedToUsers(String userId) {
-		
+		subscribedToUsers.add(userId);
 	}
 }
