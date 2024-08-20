@@ -63,4 +63,8 @@ public class User {
 	public void addToVideoHistory(String videoId) {
 		videoHistory.add(videoId);
 	}
+
+	public void addToSubscribedToUsers(String userId) {
+		
+	}
 }
