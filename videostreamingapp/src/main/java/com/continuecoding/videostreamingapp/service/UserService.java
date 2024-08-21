@@ -67,7 +67,7 @@ public class UserService {
 	public void subscribeUser(String userId) {
 		User currentUser = getCurrentUser();
 		currentUser.addToSubscribedToUsers(userId);
-		userRepository.findById(userId)
+		User user = userRepository.findById(userId)
 			.orElseThrow(()->new IllegalArgumentException("Cannot find user with userId" + userId));
 		user.addToSubscribers(currentUser.getId());
 	}
