@@ -69,6 +69,7 @@ public class UserService {
 		currentUser.addToSubscribedToUsers(userId);
 		userRepository.findById(userId)
 			.orElseThrow(()->new IllegalArgumentException("Cannot find user with userId" + userId));
+		user.addToSubscribers(currentUser.getId());
 	}
 
 	public void removeFromDislikeVideos(String videoId) {
