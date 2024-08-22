@@ -68,7 +68,7 @@ public class User {
 		subscribedToUsers.add(userId);
 	}
 
-	public void addToSubscribers(long userId) {
+	public void addToSubscribers(String userId) {
 		subscribers.add(userId);
 	}
 }
