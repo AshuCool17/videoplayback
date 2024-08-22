@@ -67,4 +67,8 @@ public class User {
 	public void addToSubscribedToUsers(String userId) {
 		subscribedToUsers.add(userId);
 	}
+
+	public void addToSubscribers(long userId) {
+		subscribers.add(userId);
+	}
 }
