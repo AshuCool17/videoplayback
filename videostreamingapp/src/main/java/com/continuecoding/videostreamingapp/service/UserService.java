@@ -73,6 +73,6 @@ public class UserService {
 	}
 
 	public void unSubscribeUser(String userId) {
-		
+		User currentUser = getCurrentUser();
 	}
 }
