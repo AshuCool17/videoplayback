@@ -72,7 +72,7 @@ public class UserService {
 		user.addToSubscribers(currentUser.getId());
 	}
 
-	public void removeFromDislikeVideos(String videoId) {
+	public void unSubscribeUser(String userId) {
 		
 	}
 }
