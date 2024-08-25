@@ -70,6 +70,9 @@ public class UserService {
 		User user = userRepository.findById(userId)
 			.orElseThrow(()->new IllegalArgumentException("Cannot find user with userId" + userId));
 		user.addToSubscribers(currentUser.getId());
+		
+		userRepository.save(currentUser);
+		userRepository.save(user);
 	}
 
 	public void unSubscribeUser(String userId) {
