@@ -78,5 +78,10 @@ public class UserService {
 	public void unSubscribeUser(String userId) {
 		User currentUser = getCurrentUser();
 		currentUser.removeFromSubscribedToUsers(userId);
+		
+		User user = userRepository.findById(userId)
+									.orElseThrow(()-> new IllegalArgumentException("Cannot find user with userId");
+		user.removeFromUnsubscribers(currentUser.getId());							
+		
 	}
 }
