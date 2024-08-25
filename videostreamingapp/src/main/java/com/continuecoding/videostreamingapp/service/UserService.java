@@ -80,8 +80,10 @@ public class UserService {
 		currentUser.removeFromSubscribedToUsers(userId);
 		
 		User user = userRepository.findById(userId)
-									.orElseThrow(()-> new IllegalArgumentException("Cannot find user with userId");
-		user.removeFromUnsubscribers(currentUser.getId());							
+									.orElseThrow(()-> new IllegalArgumentException("Cannot find user with userId"));
+		user.removeFromUnsubscribers(currentUser.getId());	
 		
+		userRepository.save(currentUser);
+		userRepository.save(user);
 	}
 }
