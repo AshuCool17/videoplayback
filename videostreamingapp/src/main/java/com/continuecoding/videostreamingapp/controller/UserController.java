@@ -39,4 +39,7 @@ public class UserController {
 	public void subscribeUser(@PathVariable String userId) {
 		userService.subscribeUser(userId);
 	}
+	
+	public void unsubscribeUser(@PathVariable String userId) {
+	}
 }
