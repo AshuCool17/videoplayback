@@ -71,4 +71,8 @@ public class User {
 	public void addToSubscribers(String userId) {
 		subscribers.add(userId);
 	}
+
+	public void removeFromSubscribedToUsers(String userId) {
+		
+	}
 }
