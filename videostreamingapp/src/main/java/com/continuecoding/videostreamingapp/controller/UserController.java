@@ -41,5 +41,6 @@ public class UserController {
 	}
 	
 	public void unsubscribeUser(@PathVariable String userId) {
+		userService.unsubscribeUser(userId);
 	}
 }
