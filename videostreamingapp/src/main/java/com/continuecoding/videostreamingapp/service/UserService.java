@@ -86,4 +86,9 @@ public class UserService {
 		userRepository.save(currentUser);
 		userRepository.save(user);
 	}
+
+	public void unsubscribeUser(String userId) {
+		// TODO Auto-generated method stub
+		
+	}
 }
