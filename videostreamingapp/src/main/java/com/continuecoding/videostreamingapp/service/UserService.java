@@ -88,7 +88,6 @@ public class UserService {
 	}
 
 	public void unsubscribeUser(String userId) {
-		// TODO Auto-generated method stub
-		
+		User currentUser = getCurrentUser();		
 	}
 }
