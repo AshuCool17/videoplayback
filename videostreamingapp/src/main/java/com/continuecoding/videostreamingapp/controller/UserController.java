@@ -42,6 +42,6 @@ public class UserController {
 	
 	@PostMapping("unsubscribe/{userId}")
 	public void unsubscribeUser(@PathVariable String userId) {
-		userService.unsubscribeUser(userId);
+		userService.unSubscribeUser(userId);
 	}
 }
