@@ -48,6 +48,12 @@ public class UserService {
 		userRepository.save(currentUser);
 	}
 	
+	public void removeFromDislikeVideos(String videoId) {
+		User currentUser = getCurrentUser();
+		currentUser.removeFromDisLikedVideos(videoId);
+		userRepository.save(currentUser);
+	}
+	
 	public void addToDisLikedVideos(String videoId) {
 		User currentUser = getCurrentUser();
 		currentUser.addToDisLikedVideos(videoId);
@@ -87,11 +93,6 @@ public class UserService {
 		userRepository.save(user);
 	}
 
-	public void removeFromDislikeVideos(String videoId) {
-		User currentUser = getCurrentUser();
-		currentUser.removeFromDislikeVideos(videoId);
-		userRepository.save(currentUser);
-		
-	}
+	
 
 }
