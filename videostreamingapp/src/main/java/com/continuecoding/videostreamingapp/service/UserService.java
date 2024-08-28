@@ -87,7 +87,11 @@ public class UserService {
 		userRepository.save(user);
 	}
 
-	public void unsubscribeUser(String userId) {
-		User currentUser = getCurrentUser();		
+	public void removeFromDislikeVideos(String videoId) {
+		User currentUser = getCurrentUser();
+		currentUser.removeFromDislikeVideos(videoId);
+		userRepository.save(currentUser);
+		
 	}
+
 }
