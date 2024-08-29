@@ -38,6 +38,7 @@ public class UserController {
 	@PostMapping("subscribe/{userId}")
 	public boolean subscribeUser(@PathVariable String userId) {
 		userService.subscribeUser(userId);
+		return true;
 	}
 	
 	@PostMapping("unsubscribe/{userId}")
