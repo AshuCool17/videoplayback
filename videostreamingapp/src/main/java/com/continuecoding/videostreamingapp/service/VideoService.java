@@ -114,6 +114,8 @@ public class VideoService {
 		videoDto.setVideoUrl(videoById.getVideoUrl());
 		videoDto.setLikeCount(videoById.getLikes().get());
 		videoDto.setDislikeCount(videoById.getDislikes().get());
+		
+		return videoDto;
 	}
 	
 	public void increaseVideoCount(Video savedVideo) {
