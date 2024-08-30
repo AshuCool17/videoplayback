@@ -58,6 +58,7 @@ public class VideoController {
 		return videoService.disLikeVideo(videoId);
 	}
 	
+	@PostMapping(value = "/{videoId}/comment")
 	public void addComment() {
 		
 	}
