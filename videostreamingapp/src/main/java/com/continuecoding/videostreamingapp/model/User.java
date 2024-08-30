@@ -77,6 +77,6 @@ public class User {
 	}
 
 	public void removeFromUnsubscribers(String userId) {
-		
+		subscribers.remove(userId);
 	}
 }
