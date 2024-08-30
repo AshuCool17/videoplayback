@@ -73,7 +73,7 @@ public class User {
 	}
 
 	public void removeFromSubscribedToUsers(String userId) {
-		subscribers.remove(userId);
+		subscribedToUsers.remove(userId);
 	}
 
 	public void removeFromUnsubscribers(String userId) {
