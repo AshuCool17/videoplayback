@@ -57,4 +57,8 @@ public class VideoController {
 	public VideoDto disLikeVideo(@PathVariable String videoId) {
 		return videoService.disLikeVideo(videoId);
 	}
+	
+	public void addComment() {
+		
+	}
 }
