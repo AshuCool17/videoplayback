@@ -44,5 +44,6 @@ public class UserController {
 	@PostMapping("unsubscribe/{userId}")
 	public void unsubscribeUser(@PathVariable String userId) {
 		userService.unSubscribeUser(userId);
+		return true;
 	}
 }
