@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
+import com.continuecoding.videostreamingapp.dto.CommentDto;
 import com.continuecoding.videostreamingapp.dto.UploadVideoResponse;
 import com.continuecoding.videostreamingapp.dto.VideoDto;
 import com.continuecoding.videostreamingapp.service.VideoService;
