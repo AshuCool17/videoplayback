@@ -18,4 +18,5 @@ import lombok.Setter;
 @AllArgsConstructor
 public class CommentDto {
 
+	private String commentText;
 }
