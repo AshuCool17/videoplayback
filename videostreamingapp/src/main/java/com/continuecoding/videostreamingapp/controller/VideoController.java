@@ -61,6 +61,6 @@ public class VideoController {
 	
 	@PostMapping(value = "/{videoId}/comment")
 	public void addComment(@PathVariable String videoId, @RequestBody CommentDto commentDto) {
-		
+		videoService.addComment(videoId, commentDto);
 	}
 }
