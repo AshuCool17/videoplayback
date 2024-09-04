@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
+import com.continuecoding.videostreamingapp.dto.CommentDto;
 import com.continuecoding.videostreamingapp.dto.UploadVideoResponse;
 import com.continuecoding.videostreamingapp.dto.VideoDto;
 import com.continuecoding.videostreamingapp.model.Video;
@@ -125,5 +126,9 @@ public class VideoService {
 
 	public VideoDto disLikeVideo(String videoId) {
 		return null;
+	}
+
+	public void addComment(String videoId, CommentDto commentDto) {
+		
 	}
 }
