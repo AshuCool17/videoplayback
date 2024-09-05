@@ -10,6 +10,7 @@ import org.springframework.web.multipart.MultipartFile;
 import com.continuecoding.videostreamingapp.dto.CommentDto;
 import com.continuecoding.videostreamingapp.dto.UploadVideoResponse;
 import com.continuecoding.videostreamingapp.dto.VideoDto;
+import com.continuecoding.videostreamingapp.model.Comment;
 import com.continuecoding.videostreamingapp.model.Video;
 import com.continuecoding.videostreamingapp.repository.VideoRepository;
 
