@@ -130,5 +130,6 @@ public class VideoService {
 
 	public void addComment(String videoId, CommentDto commentDto) {
 		Video video = getVideoById(videoId);
+		Comment comment = new Comment();
 	}
 }
