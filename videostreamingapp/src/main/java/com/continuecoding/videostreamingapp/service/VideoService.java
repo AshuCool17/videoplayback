@@ -134,5 +134,6 @@ public class VideoService {
 		Comment comment = new Comment();
 		comment.setText(commentDto.getCommentText());
 		comment.setAuthorId(commentDto.getAuthorId());
+		video.addComment();
 	}
 }
