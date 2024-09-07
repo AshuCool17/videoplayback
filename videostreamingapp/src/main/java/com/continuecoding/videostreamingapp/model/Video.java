@@ -71,7 +71,7 @@ public class Video {
 	}
 	
 	public void addComment(Comment comment) {
-		
+		commentList.add(comment);
 	}
 
 }
