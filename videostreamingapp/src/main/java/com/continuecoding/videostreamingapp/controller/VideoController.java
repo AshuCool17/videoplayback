@@ -31,6 +31,7 @@ public class VideoController {
 	private VideoService videoService; 
 	
 	@PostMapping
+	@ResponseStatus(HttpStatus.OK)
 	private UploadVideoResponse uploadVideo(@RequestParam("file") MultipartFile file) {
 		return videoService.uploadVideo(file);
 	}
