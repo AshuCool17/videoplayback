@@ -3,12 +3,14 @@
  */
 package com.continuecoding.videostreamingapp.controller;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.oauth2.jwt.Jwt;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.continuecoding.videostreamingapp.service.UserRegistrationService;
@@ -42,6 +44,7 @@ public class UserController {
 	}
 	
 	@PostMapping("unsubscribe/{userId}")
+	@ResponseStatus(HttpStatus.OK)
 	public boolean unsubscribeUser(@PathVariable String userId) {
 		userService.unSubscribeUser(userId);
 		return true;
