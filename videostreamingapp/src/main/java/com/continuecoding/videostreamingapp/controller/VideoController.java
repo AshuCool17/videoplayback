@@ -36,6 +36,7 @@ public class VideoController {
 	}
 	
 	@PostMapping
+	@ResponseStatus(HttpStatus.OK)
 	private String uploadThumbnail(@RequestParam("file") MultipartFile file,
 			@RequestParam("videoId") String videoId) {
 		return videoService.uploadThumbnail(file, videoId);
