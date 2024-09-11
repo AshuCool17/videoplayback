@@ -73,6 +73,7 @@ public class VideoController {
 		videoService.addComment(videoId, commentDto);
 	}
 	
+	@ResponseStatus(HttpStatus.OK)
 	public List<CommentDto> getAllComments(@PathVariable String videoId){
 		
 	}
