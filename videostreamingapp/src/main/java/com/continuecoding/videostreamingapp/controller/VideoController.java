@@ -72,4 +72,8 @@ public class VideoController {
 	public void addComment(@PathVariable String videoId, @RequestBody CommentDto commentDto) {
 		videoService.addComment(videoId, commentDto);
 	}
+	
+	public List<CommentDto> getAllComments(@PathVariable String videoId){
+		
+	}
 }
