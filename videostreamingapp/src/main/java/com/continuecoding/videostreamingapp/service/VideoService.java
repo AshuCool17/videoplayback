@@ -3,6 +3,8 @@
  */
 package com.continuecoding.videostreamingapp.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
@@ -137,5 +139,12 @@ public class VideoService {
 		video.addComment(comment);
 		
 		videoRepository.save(video);
+	}
+
+	public List<CommentDto> getAllComments(String videoId) {
+		Video video = getVideoById(videoId);
+		List<CommentDto> commentList = video.getCommentList();
+		
+		return commentList.stream().map(comment -> mapToComment(comment));
 	}
 }
