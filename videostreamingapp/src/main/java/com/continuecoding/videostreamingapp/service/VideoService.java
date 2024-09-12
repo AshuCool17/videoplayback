@@ -143,7 +143,7 @@ public class VideoService {
 
 	public List<CommentDto> getAllComments(String videoId) {
 		Video video = getVideoById(videoId);
-		List<CommentDto> commentList = video.getCommentList();
+		List<Comment> commentList = video.getCommentList();
 		
 		return commentList.stream().map(comment -> mapToComment(comment));
 	}
