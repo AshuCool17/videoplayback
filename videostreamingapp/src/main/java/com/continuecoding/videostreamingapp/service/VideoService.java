@@ -148,7 +148,7 @@ public class VideoService {
 		return commentList.stream().map(comment -> mapToComment(comment));
 	}
 
-	private Object mapToComment(Comment comment) {
+	private CommentDto mapToComment(Comment comment) {
 		return null;
 	}
 }
