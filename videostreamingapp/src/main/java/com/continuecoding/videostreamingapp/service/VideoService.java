@@ -149,6 +149,7 @@ public class VideoService {
 	}
 
 	private CommentDto mapToComment(Comment comment) {
+		CommentDto commentDto = new CommentDto();
 		return null;
 	}
 }
