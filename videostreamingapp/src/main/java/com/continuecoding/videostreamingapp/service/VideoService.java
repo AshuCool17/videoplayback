@@ -152,6 +152,6 @@ public class VideoService {
 		CommentDto commentDto = new CommentDto();
 		commentDto.setCommentText(comment.getText());
 		commentDto.setAuthorId(comment.getAuthorId());
-		return null;
+		return commentDto;
 	}
 }
