@@ -151,6 +151,7 @@ public class VideoService {
 	private CommentDto mapToComment(Comment comment) {
 		CommentDto commentDto = new CommentDto();
 		commentDto.setCommentText(comment.getText());
+		commentDto.setAuthorId(comment.getAuthorId());
 		return null;
 	}
 }
