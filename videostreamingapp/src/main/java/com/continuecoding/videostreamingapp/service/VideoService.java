@@ -154,4 +154,8 @@ public class VideoService {
 		commentDto.setAuthorId(comment.getAuthorId());
 		return commentDto;
 	}
+	
+	public List<VideoDto> getAllVideos(){
+		
+	}
 }
