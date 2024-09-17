@@ -80,4 +80,8 @@ public class VideoController {
 	public List<CommentDto> getAllComments(@PathVariable String videoId){
 		return videoService.getAllComments(videoId);
 	}
+	
+	public List<CommentDto> getAllVideos(){
+		
+	}
 }
