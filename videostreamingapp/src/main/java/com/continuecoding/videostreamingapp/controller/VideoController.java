@@ -81,6 +81,7 @@ public class VideoController {
 		return videoService.getAllComments(videoId);
 	}
 	
+	@ResponseStatus(HttpStatus.OK)
 	public List<CommentDto> getAllVideos(){
 		
 	}
