@@ -81,6 +81,7 @@ public class VideoController {
 		return videoService.getAllComments(videoId);
 	}
 	
+	@GetMapping(value = "/{videoId}/videos")
 	@ResponseStatus(HttpStatus.OK)
 	public List<CommentDto> getAllVideos(){
 		
