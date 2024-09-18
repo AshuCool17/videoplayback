@@ -158,4 +158,6 @@ public class VideoService {
 	public List<VideoDto> getAllVideos(){
 		return videoRepository.findAll().stream().map(this::mapToVideoDto).toList();
 	}
+	
+	private CommentDto mapToVideoDto(Comment comment) {
 }
