@@ -49,4 +49,8 @@ public class UserController {
 		userService.unSubscribeUser(userId);
 		return true;
 	}
+	
+	public Set<String> userHistory(){
+		
+	}
 }
