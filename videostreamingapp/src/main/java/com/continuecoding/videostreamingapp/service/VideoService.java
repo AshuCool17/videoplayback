@@ -145,10 +145,10 @@ public class VideoService {
 		Video video = getVideoById(videoId);
 		List<Comment> commentList = video.getCommentList();
 		
-		return commentList.stream().map(comment -> mapToComment(comment));
+		return commentList.stream().map(this::mapToCommentDto).toList();
 	}
 
-	private CommentDto mapToComment(Comment comment) {
+	private CommentDto mapToCommentDto(Comment comment) {
 		CommentDto commentDto = new CommentDto();
 		commentDto.setCommentText(comment.getText());
 		commentDto.setAuthorId(comment.getAuthorId());
@@ -160,4 +160,6 @@ public class VideoService {
 	}
 	
 	private CommentDto mapToVideoDto(Comment comment) {
+		
+	}
 }
