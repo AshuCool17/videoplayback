@@ -50,6 +50,7 @@ public class UserController {
 		return true;
 	}
 	
+	@GetMapping("/{userId}/history")
 	public Set<String> userHistory(){
 		
 	}
