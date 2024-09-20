@@ -52,7 +52,7 @@ public class UserController {
 	
 	@GetMapping("/{userId}/history")
 	@ResponseStatus(HttpStatus.OK)
-	public Set<String> userHistory(){
+	public Set<String> userHistory(@PathVariable String userId){
 		
 	}
 }
