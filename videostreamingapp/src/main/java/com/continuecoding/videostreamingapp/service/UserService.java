@@ -96,7 +96,8 @@ public class UserService {
 	}
 
 	public Set<String> userHistory(String userId) {
-		return null;
+		User user = getUserById(userId);
+		return user.getVideoHistory();
 	}
 
 	
