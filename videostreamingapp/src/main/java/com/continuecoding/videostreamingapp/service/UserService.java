@@ -3,6 +3,8 @@
  */
 package com.continuecoding.videostreamingapp.service;
 
+import java.util.Set;
+
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.oauth2.jwt.Jwt;
 import org.springframework.stereotype.Service;
@@ -91,6 +93,10 @@ public class UserService {
 		
 		userRepository.save(currentUser);
 		userRepository.save(user);
+	}
+
+	public Set<String> userHistory(String userId) {
+		return null;
 	}
 
 	
