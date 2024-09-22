@@ -160,6 +160,6 @@ public class VideoService {
 	}
 	
 	private VideoDto mapToVideoDto() {
-		
+		VideoDto videoDto = new VideoDto();
 	}
 }
