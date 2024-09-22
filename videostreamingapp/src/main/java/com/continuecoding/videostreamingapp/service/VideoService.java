@@ -159,7 +159,7 @@ public class VideoService {
 		return videoRepository.findAll().stream().map(this::mapToVideoDto).toList();
 	}
 	
-	private VideoDto mapToVideoDto() {
+	private VideoDto mapToVideoDto(Video video) {
 		VideoDto videoDto = new VideoDto();
 		return videoDto;
 	}
