@@ -56,13 +56,16 @@ public class UserRegistrationService {
 			Optional<User> userBySubject = userRepository.findBySub(userInfoDTO.getSub());
 			if(userBySubject.isPresent()) {
 				return userBySubject.get().getId();
+				
 			}else {
+				
 				User user = new User();
 				user.setFirstName(userInfoDTO.getGivenName());
 				user.setLastName(userInfoDTO.getFamilyName());
 				user.setFullName(userInfoDTO.getName());
 				user.setEmail(userInfoDTO.getEmail());
 				return userRepository.save(user).getId();
+				
 			}
 			
 			
